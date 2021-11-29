@@ -498,6 +498,7 @@ body {
 .cont-ftr {
   display: flex;
   flex-direction: column;
+  width: 231px;
 }
 .foot-adrs {
   text-decoration: none;
@@ -618,6 +619,67 @@ body {
 }
 .social-icons-ftr {
   align-self: center;
+}
+/* ----------------------------- FOOTER SIGNUP FORM ------------------*/
+.signup-form {
+  /* display: flex; */
+  margin-left: 93px;
+}
+.footer-label {
+  display: flex;
+  flex-direction: column;
+  width: 358px;
+  margin-right: 12px;
+}
+
+.signup-form-title {
+  display: flex;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.14em;
+  font-weight: 700;
+  color: var(--background);
+  margin-bottom: 20px;
+}
+.email-area-button {
+  display: flex;
+  align-items: baselin;
+}
+.email-area {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  background-color: var(--hero-background);
+  color: var(--background);
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.signup-form-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875em;
+  letter-spacing: 0.06em;
+  color: var(--background);
+  background-color: var(--accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+.signup-form-button-text {
+  margin-right: 10px;
+}
+.icon-send {
+  fill: var(--background);
 }
 
 /* --------------------------------------PORTFOLIO---------------------------------*/
@@ -769,6 +831,7 @@ body {
   display: block;
   height: auto;
 }
+
 /*--------------------------------- MODAL -------------------------------*/
 .backdrop {
   position: fixed;
