@@ -875,13 +875,17 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition-property: border;
+  transition-property: fill, border;
   transition-duration: 350ms;
   transition-timing-function: var(--cubic);
 }
 .modal-close:hover,
 .modal-close:focus {
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-close:hover .icon-close,
+.modal-close:focus .icon-close {
+  fill: var(--accent);
 }
 .is-hidden {
   visibility: hidden;
@@ -894,10 +898,6 @@ body {
   transition-property: fill;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--cubic);
-}
-.icon-close:hover,
-.icon-close:focus {
-  fill: var(--accent);
 }
 /*-------------------------------- MODAL FORM ------------------------*/
 .user-contacts-form {
@@ -953,7 +953,7 @@ body {
   transition-duration: var(--transition-time);
   transition-timing-function: var(--cubic);
   position: absolute;
-  transform: translateX(12px) translateY(28px);
+  transform: translateX(12px) translateY(31px);
 }
 
 .user-contacts-input:focus,
