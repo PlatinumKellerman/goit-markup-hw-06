@@ -850,6 +850,7 @@ body {
 
 .modal {
   position: absolute;
+  padding: 40px;
   top: 50%;
   left: 50%;
   width: 528px;
@@ -901,28 +902,38 @@ body {
 }
 /*-------------------------------- MODAL FORM ------------------------*/
 .user-contacts-form {
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
+  display: block;
 }
 .user-contacts-tittle {
+  display: block;
+  text-align: center;
   font-size: 20px;
   line-height: 1.15em;
   margin-bottom: 12px;
   color: var(--main-h2h3);
-  text-align: center;
+  pointer-events: none;
 }
 .user-contacts-labels {
-  display: flex;
-  flex-direction: column;
+  position: relative;
+  display: block;
   width: 100%;
   font-size: 12px;
   line-height: 1.16em;
   letter-spacing: 0.01em;
   color: var(--main-text);
+  margin-bottom: 10px;
+}
+.comment-label {
+  display: block;
+  font-size: 12px;
+  line-height: 1.16em;
+  letter-spacing: 0.01em;
+  color: var(--main-text);
+  margin-bottom: 20px;
 }
 
 .label-name {
+  display: block;
   font-size: 12px;
   line-height: 1.16em;
   letter-spacing: 0.01em;
@@ -939,7 +950,6 @@ body {
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 42px;
-  margin-bottom: 10px;
   cursor: pointer;
   transition-property: fill, border-color;
   transition-duration: var(--transition-time);
@@ -948,12 +958,20 @@ body {
 .user-icon,
 .phone-icon,
 .mail-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(12px) translateY(31px);
   fill: var(--main-h2h3);
   transition-property: fill;
   transition-duration: var(--transition-time);
   transition-timing-function: var(--cubic);
-  position: absolute;
-  transform: translateX(12px) translateY(31px);
+}
+.user-icon:hover,
+.phone-icon:hover,
+.mail-icon:hover {
+  cursor: pointer;
+  fill: var(--accent);
 }
 
 .user-contacts-input:focus,
@@ -976,10 +994,10 @@ body {
 
 .text-field {
   height: 120px;
+  width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 12px 16px;
-  margin-bottom: 20px;
   resize: none;
   cursor: pointer;
   transition-property: border-color;
@@ -1000,13 +1018,12 @@ body {
 }
 
 .user-checkbox {
-  display: flex;
-  flex-direction: row;
+  position: relative;
+  display: block;
   margin-bottom: 30px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+  text-align: center;
 }
+
 .checkbox-link {
   font-family: Roboto;
   font-style: normal;
@@ -1015,7 +1032,9 @@ body {
   line-height: 1.71em;
   color: var(--accent);
   padding-left: 5px;
+  text-decoration-skip-ink: none;
 }
+
 .chekbox-text {
   font-family: Roboto;
   font-style: normal;
@@ -1026,14 +1045,25 @@ body {
   padding-left: 5px;
 }
 .input-checkbox {
-  position: relative;
   appearance: none;
   -webkit-appearance: none;
+}
+.icon-square {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition-property: fill;
+  transition-duration: var(--transition-time);
+  transition-timing-function: var(--cubic);
+  transform: translateX(5px) translateY(4px);
 }
 
 .icon-check {
   position: absolute;
-  transform: translateX(-196px);
+  top: 0;
+  left: 0;
+  transform: translateX(6px) translateY(4px);
   fill: var(--background);
   cursor: pointer;
 }
@@ -1042,12 +1072,20 @@ body {
   border-radius: 2px;
   fill: var(--accent);
 }
+
 .input-checkbox:checked + .icon-square + .icon-check {
   fill: var(--background);
 }
 
+.input-checkbox:focus + .icon-square {
+  fill: var(--accent);
+}
+.input-checkbox:hover + .icon-square {
+  fill: var(--accent);
+}
+
 .user-contacts-button {
-  margin: auto auto;
+  display: block;
   width: 200px;
   background: var(--accent);
   font-family: Roboto;
@@ -1063,5 +1101,7 @@ body {
   padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
   cursor: pointer;
 }
